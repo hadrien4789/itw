@@ -5,5 +5,6 @@ describe(`after visiting ["www.welcometothejungle.com/fr/me/settings/account"] w
   })
   it("_profile-avatar data are updated", () => {
     // ...
+    cy.wait(5500)
   })
 })
