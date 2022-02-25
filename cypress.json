@@ -21,5 +21,6 @@
     "*msecnd.net",
     "*facebook.net"
   ],
+  "watchForFileChanges": false,
   "projectId": ""
 }
