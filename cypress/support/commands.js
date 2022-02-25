@@ -43,3 +43,6 @@ Cypress.Commands.add('attachFiles', {
     force: true
   })
 })
+
+
+import 'cypress-file-upload';

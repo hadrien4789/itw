@@ -1,4 +1,5 @@
 import data from "../fixtures/ids/data.json" 
+//import png from "../fixtures/img/inqom.png" 
 
 describe(`after visiting ["www.welcometothejungle.com/fr/me/settings/account"] webpage, clicking on ["Se connecter"] button, filling ["Email", "Mot de passe"] inputs, clicking ["Se connecter"] button, filling ["Photo de profil"] input and clicking on ["OK"] button`, () => {
 
@@ -9,6 +10,9 @@ describe(`after visiting ["www.welcometothejungle.com/fr/me/settings/account"] w
 
   after(() => {
     // ...
+    cy.get('.bZzTqu').click()
+    cy.get('[data-testid="account-edit-button-submit"]').click()
+    cy.reload()
   })
 
   it("_profile-avatar data are updated", () => {
@@ -30,18 +34,18 @@ describe(`after visiting ["www.welcometothejungle.com/fr/me/settings/account"] w
     
     cy.url().should('contains', 'www.welcometothejungle.com/fr/me/settings/account')
     
-    cy.wait(4000)
+    cy.wait(2000)
     
-    //cy.get('.sc-fGoOlv > .sc-djWRfJ').attachFiles('integration/inqom.png')
+    const filepath = 'img/inqom.png'
+   
+    cy.get('.dfcLOV')
+    .attachFile(filepath, { subjectType: 'drag-n-drop' })
 
-   // cy.get('.sc-fGoOlv > .sc-djWRfJ').attachFiles('cypress/fixtures/images/inqom.png')
+    cy.get('[data-testid="account-edit-button-submit"]').click()
 
-    //cy.wait(4000)
-    //cy.get('#file-upload').selectFile('cypress/fixtures/images/evening.png')
+    cy.get('.sc-gVkuDy').should('be.visible')
 
-  })
+    cy.reload()
 
-
-
-
+})
 })
