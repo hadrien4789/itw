@@ -1,0 +1,15 @@
+
+> cypress@9.5.0 postinstall C:\Users\Hadrien\Desktop\Test_Inqom\itw\node_modules\cypress
+> node index.js --exec install
+
+
+Cypress 9.5.0 is installed in C:\Users\Hadrien\AppData\Local\Cypress\Cache\9.5.0
+
++ cypress@9.5.0
+added 166 packages from 175 contributors and audited 167 packages in 11.81s
+
+27 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
